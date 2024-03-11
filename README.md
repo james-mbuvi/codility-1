@@ -1,0 +1,1 @@
+# codility-1
