@@ -30,7 +30,7 @@ function solution(A, D, N) {
             totalIncome += amount;
         }
 
-        // Update total card payments
+        
         if (amount < 0) {
             const month = date.substring(0, 7);
             if (!totalCardPayments[month]) {
@@ -40,12 +40,12 @@ function solution(A, D, N) {
         }
     }
 
-    // Calculate the balance at the end of the year
+    
     for (let month = 1; month <= 12; month++) {
         const monthStr = `2020-${String(month).padStart(2, '0')}`;
         const cardPaymentTotal = totalCardPayments[monthStr] || 0;
 
-        // Deduct fee if there were less than three card payments or total card payments are less than 100
+        
         if (cardPaymentTotal < 100 || Object.keys(totalCardPayments).length < 3) {
             balance -= 5;
         }
