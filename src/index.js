@@ -20,12 +20,12 @@ function solution(A, D, N) {
     let totalCardPayments = {};
     let balance = 0;
 
-    // Iterate over the transactions
+    
     for (let i = 0; i < N; i++) {
         const amount = A[i];
         const date = D[i];
 
-        // Update total income
+        
         if (amount >= 0) {
             totalIncome += amount;
         }
